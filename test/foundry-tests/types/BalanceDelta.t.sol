@@ -37,7 +37,7 @@ contract TestBalanceDelta is Test {
         int256 ac = int256(a) + c;
         int256 bd = int256(b) + d;
 
-        // make sure the addition doesn't overflow
+        // make sure the addition does not overflow
         vm.assume(ac == int128(ac));
         vm.assume(bd == int128(bd));
 
@@ -50,7 +50,7 @@ contract TestBalanceDelta is Test {
         int256 ac = int256(a) - c;
         int256 bd = int256(b) - d;
 
-        // make sure the subtraction doesn't underflow
+        // make sure the subtraction does not underflow
         vm.assume(ac == int128(ac));
         vm.assume(bd == int128(bd));
 
